@@ -4,7 +4,7 @@
 
 ## 📌 Información General
 
-- **Título:** Práctica de Algoritmos de Ordenamiento
+- **Título:** Práctica Listas Enlazadas
 - **Asignatura:** Estructura de Datos
 - **Carrera:** Computación
 - **Estudiante:** Michael Yumbla, Mateo Cordero
