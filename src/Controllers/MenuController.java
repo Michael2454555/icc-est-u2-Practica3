@@ -11,11 +11,11 @@ public class MenuController {
     }
 
     public void showMenu() {
-        boolean running = true;
-        while (running) {
-            consoleView.displayMenu();
-            String choice = consoleView.getInput("Elija una opcion valida: ");
-            switch (choice) {
+        boolean correr = true;
+        while (correr) {
+            consoleView.Menu();
+            String opcion = consoleView.getInput("Elija una opcion valida: ");
+            switch (opcion) {
                 case "1":
                     addContact();
                     break;
@@ -29,7 +29,7 @@ public class MenuController {
                     printList();
                     break;
                 case "5":
-                    running = false;
+                    correr = false;
                     break;
                 default:
                     consoleView.showMessage("Opcion Incorrecta intentelo de nuevo.");

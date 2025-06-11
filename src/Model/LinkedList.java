@@ -13,22 +13,22 @@ public class LinkedList<T> {
         if (head == null) {
             head = newNode;
         } else {
-            NodeGeneric<T> current = head;
-            while (current.getNext() != null) {
-                current = current.getNext();
+            NodeGeneric<T> actual = head;
+            while (actual.getNext() != null) {
+                actual = actual.getNext();
             }
-            current.setNext(newNode);
+            actual.setNext(newNode);
         }
         size++;
     }
 
     public T findByValue(T value) {
-        NodeGeneric<T> current = head;
-        while (current != null) {
-            if (current.getValue().equals(value)) {
-                return current.getValue();
+        NodeGeneric<T> actual = head;
+        while (actual != null) {
+            if (actual.getValue().equals(value)) {
+                return actual.getValue();
             }
-            current = current.getNext();
+            actual = actual.getNext();
         }
         return null;
     }
@@ -40,23 +40,23 @@ public class LinkedList<T> {
             size--;
             return true;
         }
-        NodeGeneric<T> current = head;
-        while (current.getNext() != null) {
-            if (current.getNext().getValue().equals(value)) {
-                current.setNext(current.getNext().getNext());
+        NodeGeneric<T> actual = head;
+        while (actual.getNext() != null) {
+            if (actual.getNext().getValue().equals(value)) {
+                actual.setNext(actual.getNext().getNext());
                 size--;
                 return true;
             }
-            current = current.getNext();
+            actual = actual.getNext();
         }
         return false;
     }
 
-    public void print() {
-        NodeGeneric<T> current = head;
-        while (current != null) {
-            System.out.println(current.getValue());
-            current = current.getNext();
+    public void printLista() {
+        NodeGeneric<T> actual = head;
+        while (actual != null) {
+            System.out.println(actual.getValue());
+            actual = actual.getNext();
         }
     }
 

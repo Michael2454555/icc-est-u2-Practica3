@@ -1,5 +1,4 @@
 package Controllers;
-
 import Model.*;
 
 public class ContactManager {
@@ -17,7 +16,7 @@ public class ContactManager {
         NodeGeneric<Contact<?, ?>> current = contacts.getHead();
         while (current != null) {
             Contact<?, ?> contact = current.getValue();
-            if (contact.getName().toString().equalsIgnoreCase(name)) {
+            if (contact.getName().equals(name)) {
                 return contact;
             }
             current = current.getNext();
@@ -29,7 +28,7 @@ public class ContactManager {
         NodeGeneric<Contact<?, ?>> current = contacts.getHead();
         while (current != null) {
             Contact<?, ?> contact = current.getValue();
-            if (contact.getName().toString().equalsIgnoreCase(name)) {
+            if (contact.getName().equals(name)) {
                 return contacts.deleteByValue(contact);
             }
             current = current.getNext();
@@ -38,6 +37,6 @@ public class ContactManager {
     }
 
     public void printList() {
-        contacts.print();
+        contacts.printLista();
     }
 }

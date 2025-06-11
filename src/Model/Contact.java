@@ -26,11 +26,28 @@ public class Contact <T,U> {
         this.phone = phone;
     }
 
+   
+     
     @Override
     public String toString() {
         return "Contacto [nombre=" + name + ", telefono=" + phone + "]";
     }
 
+    @Override
+
+    public boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
+    }
+    
+    if (obj == null || getClass() != obj.getClass()) {
+        return false;
+    }
+    
+    Contact<?,?> c = (Contact) obj;
+    
+    return name != null && name.equals(c.getName());
+}
     
     
 }
